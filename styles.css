@@ -1,0 +1,133 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0px;
+}
+#banner {
+	width: 100%;
+	background: #112;
+	color: #fff;
+	font: 34px Arial, sans-serif;
+	padding: 20px 0px;
+	text-align: center;
+	font-variant: all-small-caps;
+}
+#banner .smaller {
+	font-size: 20px;
+	vertical-align: middle;
+}
+
+.ngslide {
+	width: 100%;
+}
+.ngslide ul.gallery {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	height: 70vh; /*height: 500px;*/
+	overflow: hidden;
+	position: relative;
+	background: #26264B;
+}
+.ngslide ul.gallery li.slide {
+	list-style: none;	
+	width: 100%;
+	position: absolute;
+	opacity: 0;
+    transition: opacity 1s ease-in, left 1s ease-in 1s; /* Fades out, then moves back to the left only when done. */
+	-webkit-transition: opacity 1s ease-in, left 1s ease-in 1s;
+    -moz-transition: opacity 1s ease-in, left 1s ease-in 1s;
+    -o-transition: opacity 1s ease-in, left 1s ease-in 1s;
+	/*top: -500px;*/ left: -100%;
+	height: 70vh; /*height: 500px;*/
+	background-size: 100% auto;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.ngslide ul li.slide.current {
+	opacity: 1; /* Instantly visible */
+	top: 0px;
+	left: 0px;
+	transition: left 1s ease-in; /* Come in from the left */
+	-webkit-transition: left 1s ease-in;
+    -moz-transition: left 1s ease-in;
+    -o-transition: left 1s ease-in;
+}
+
+.ngslide ul li.slide img {
+	width: 100%;
+}
+
+.ngslide ul li.slide img.current {
+}
+
+/* Selection controls */
+.ngslide ul.selection {
+	width: 100%;
+	margin: auto;
+	background: #121;
+	color: #fff;
+	padding: 0px;
+}
+.ngslide ul.selection li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 10px;
+	font-size: 22px;
+	cursor: pointer;
+	padding: 4px 10px;
+	border: 1px solid #000;
+}
+.ngslide ul.selection li.current {
+	color: #211;
+	background: #363;
+}
+
+.ngslide .arrows {
+	/*bottom: 600px;
+	position: relative;*/
+	position: absolute;
+	top: 25%;
+	font-size: 5vh; /*50px;*/
+	width: 100%;
+}
+.ngslide .arrows a {
+	text-decoration: none;
+	color: #fff;
+	padding: 150px 20px;
+	background: rgba(10,10,10,0.7);
+}
+.ngslide .arrows .left-arrow {
+	float: left;
+}
+.ngslide .arrows .right-arrow {
+	float: right;
+}
+
+/* Upload page */
+#wrapper {
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+a.backHome div {
+	width: 100%;
+	background: #112;
+	color: #fff;
+	font: 24px Arial, sans-serif;
+	padding: 20px 0px;
+	text-align: center;
+}
+a.backHome div:hover {
+	color: #999;
+}
+a.backHome {
+	text-decoration: none;
+}
+#imageUploadForm {
+	width: 100%;
+	background: #3a3a73;
+	color: #ccc;
+	font: 24px Arial, sans-serif;
+	padding: 20px 0px;
+}

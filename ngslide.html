@@ -1,0 +1,22 @@
+<div class="ngslide">
+	<ul class="gallery">
+		<li class="slide" ng-repeat="image in images" ng-class="{current: image.currentImage}" style="background-image:url('{{image.src}}');">
+		</li>
+	</ul>
+	<div class="selectionControls">
+		<ul class="selection">
+			<li ng-repeat="image in images" ng-click="select($index)" ng-class="{current: image.currentImage}">{{$index+1}}</li>
+		</ul>
+	</div>
+	<div class="arrows">
+		<a href="#" class="left-arrow" ng-click="prev()">
+		  <
+		</a>
+		<a href="#" class="right-arrow" ng-click="next()">
+		  >
+		</a>
+	</div>
+	<div id="notifyZone">
+	<div class="notification" ng-repeat="error in errors">{{error}}</div>
+	</div>
+</div>

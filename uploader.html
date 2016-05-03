@@ -1,0 +1,18 @@
+<div class="uploader" ng-show="displayed">
+
+	<form method="post" enctype="multipart/form-data" ng-submit="doUpload()">
+		<input type="hidden" name="submitFlag" value="1" />
+		<input type="hidden" name="MAX_FILE_SIZE" value="10000000" />
+		<input type="file" name="slide" ng-model="uploadData.slide" nv-file-select uploader="uploader" />
+		        <ul>
+            <li ng-repeat="item in uploader.queue">
+                Name: <span ng-bind="item.file.name"></span><br/>
+                <button ng-click="item.upload()">upload</button>
+            </li>
+        </ul>
+		<input type="text" name="title" placeholder="Title..." ng-model="uploadData.title" />
+		<input type="text" name="caption" placeholder="Caption (optional)..." ng-model="uploadData.caption" />
+		<input type="submit" value="Upload" name="submit" />
+	</form>
+
+</div>

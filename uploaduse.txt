@@ -1,0 +1,29 @@
+	.controller('UploadController', ['$scope', '$http', 'retrieveService', function($scope, $http, retrieveService) {
+		$scope.displayed = false;
+		$scope.toggle = function() {
+			$scope.displayed = !$scope.displayed;
+		};
+		$scope.uploadData = {};
+		$scope.doUpload = function() {
+			
+		 alert("Uploading " + $scope.uploadData.slide);
+			$http.post('upload/upload.php', $scope.uploadData)
+			 .success(function(data, status, headers, config) { // (replace with "then")
+				
+				$scope.images = retrieveService();
+			 }) // End of success
+			 
+			.error(function(data, status) {
+				$scope.errors.push(status);
+			});
+
+		};
+	}])
+	
+	.directive("uploader", function() {
+		return {
+			restrict: 'AE',
+			replace: true,
+			templateUrl: 'uploader.html'
+		};
+	})
