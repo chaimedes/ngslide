@@ -1,7 +1,15 @@
+/* 
+ng-slide, an AngularJS slideshow
+CSS Styling
+Martin Berlove
+4/28/2016
+*/
 body {
 	font-family: Arial, sans-serif;
 	margin: 0px;
 }
+
+/* The top banner with title, etc */
 #banner {
 	width: 100%;
 	background: #112;
@@ -16,6 +24,7 @@ body {
 	vertical-align: middle;
 }
 
+/* The slider body */
 .ngslide {
 	width: 100%;
 }
@@ -23,7 +32,7 @@ body {
 	width: 100%;
 	margin: 0px;
 	padding: 0px;
-	height: 70vh; /*height: 500px;*/
+	height: 70vh; /* Size proportional to the browser viewport. */
 	overflow: hidden;
 	position: relative;
 	background: #26264B;
@@ -37,12 +46,14 @@ body {
 	-webkit-transition: opacity 1s ease-in, left 1s ease-in 1s;
     -moz-transition: opacity 1s ease-in, left 1s ease-in 1s;
     -o-transition: opacity 1s ease-in, left 1s ease-in 1s;
-	/*top: -500px;*/ left: -100%;
-	height: 70vh; /*height: 500px;*/
+	left: -100%;
+	height: 70vh; /* Size proportional to the browser viewport. */
 	background-size: 100% auto;
 	background-position: center center;
 	background-repeat: no-repeat;
 }
+
+/* The active slide */
 .ngslide ul li.slide.current {
 	opacity: 1; /* Instantly visible */
 	top: 0px;
@@ -82,12 +93,11 @@ body {
 	background: #363;
 }
 
+/* Next and previous arrow controls */
 .ngslide .arrows {
-	/*bottom: 600px;
-	position: relative;*/
 	position: absolute;
 	top: 25%;
-	font-size: 5vh; /*50px;*/
+	font-size: 5vh; /* Size proportional to the browser viewport. */
 	width: 100%;
 }
 .ngslide .arrows a {

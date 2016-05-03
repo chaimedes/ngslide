@@ -1,5 +1,6 @@
 /* 
 ng-slide, an AngularJS slideshow
+Main script file
 Martin Berlove
 4/28/2016
 */
@@ -23,6 +24,7 @@ Martin Berlove
 			
 				// If successful
 				function(response) {
+					alert(response.data[0]);
 					// Loop through the data and push the data from each image to our array
 					for (var i = 0; i < response.data.length; i++) {
 						images.push(
