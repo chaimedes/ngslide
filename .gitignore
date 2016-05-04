@@ -3,5 +3,8 @@ ngslide-old.html
 oldpromise.txt 
 retrieve.php 
 nguploader.js 
-upload/* 
+upload/index.php
+upload/upload.php
+upload/upload_sample.php
 images/* 
+uploaduse.txt 

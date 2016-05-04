@@ -24,7 +24,6 @@ Martin Berlove
 			
 				// If successful
 				function(response) {
-					alert(response.data[0]);
 					// Loop through the data and push the data from each image to our array
 					for (var i = 0; i < response.data.length; i++) {
 						images.push(
