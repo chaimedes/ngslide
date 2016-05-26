@@ -1,4 +1,5 @@
 # ngslide -- an AngularJS slideshow
+![ngslide, an AngularJS slideshow](http://i.imgur.com/F9EHHTd.png)
 ## Intro
 ngslide is a small and straightforward slideshow script I created because I didn't like the existing Angular-based slideshows.
 There is one main JS file, but it couples with a small PHP script and a MySQL database to provide a more realistic environment
